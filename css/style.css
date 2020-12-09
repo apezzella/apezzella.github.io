@@ -7,7 +7,7 @@
 	* Author............: Adriano Pezzella 
 	* Created date......: 05-03-2015
 	* Modified by.......: Adriano Pezzella
-	* Modified date.....: 08-27-2020
+	* Modified date.....: 10-25-2020
 
 +----------------------------------------------------------------------------------------------------*/
 
@@ -26,7 +26,7 @@ h1 strong {
 	font-weight: 900;
 }
 h2 {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	line-height: 1;
 	margin:  0;
 }
@@ -35,7 +35,7 @@ font-size: 18px;
 font-weight: 900;
 }
 h4 {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 h5 {
 	text-transform: uppercase;
@@ -52,6 +52,9 @@ p.intro{
 	line-height: 24px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+em { font-size: 16px; }
+
 a{ color: #d4af37;}
 a:hover,
 a:focus{
@@ -119,6 +122,7 @@ hr {
 	color: #FFF;
 	font-size: 16px;
 	letter-spacing: 1px;
+	transition: 0.6s;
 }
 
 #tf-menu.navbar-default .navbar-nav > li > a:hover,
@@ -136,6 +140,7 @@ hr {
 	color: #d4af37 !important;
 	background-color: transparent;
 	font-weight: 700;
+	cursor: default;
 }
 
 .navbar-toggle {
@@ -339,7 +344,7 @@ img.img-circle.awards-img {
 	padding: 18px 14px;
 	margin-bottom: 0;
 	border-radius: 50%;
-	transition: all 5.5s;
+	transition: all 0.8s;
 }
 
 #tf-services i.fa.fa-mobile{
@@ -538,6 +543,14 @@ ol.type li a.active { font-weight: 700; }
   background-color: #d4af37;
 }
 
+.carousel-control {
+	opacity: .2;
+}
+
+.carousel-control:hover, 
+.carousel-control:focus {
+	opacity: 0.3;
+}
 
 .carousel-control .fa-chevron-left,
 .carousel-control .fa-chevron-right {
@@ -567,10 +580,10 @@ ol.type li a.active { font-weight: 700; }
     font-size: 30px;
   }
   .carousel-control .fa-chevron-left {
-    margin-left: -50px;
+    margin-left: -75px;
   }
   .carousel-control .fa-chevron-right {
-    margin-right: -50px;
+    margin-right: -75px;
   }
 }
 
@@ -662,7 +675,12 @@ button.btn.tf-btn.btn-default {
 	text-transform: uppercase;
 }
 
-.btn:active, .btn.active {
+.btn-default {
+	background-color: #f3f3f3;
+}
+
+.btn:active, 
+.btn.active {
 	background-image: none;
 	outline: 0;
 	-webkit-box-shadow: none;
