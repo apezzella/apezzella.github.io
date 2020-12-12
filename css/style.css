@@ -55,9 +55,12 @@ p.intro{
 
 em { font-size: 16px; }
 
-a{ color: #d4af37;}
+a { 
+	color: #d4af37;	
+	transition: 0.3s; 
+}
 a:hover,
-a:focus{
+a:focus {
 	text-decoration: none;
 	color: #f5cc4b;
 }
