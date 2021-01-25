@@ -526,6 +526,17 @@ ol.type li a.active { font-weight: 700; }
 
 
 
+.fx-shadow {
+	/* width: [object Object]px; 
+	height: [object Object]px; */
+	background: #F8F8F8; 
+	border: solid #e2e2e2 1px; 
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)  ; 
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)  ; 
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)  ; 
+}
+
+
 /* Portfolio Section */
 .carousel {
   margin-top: 20px; 
