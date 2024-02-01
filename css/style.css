@@ -5,11 +5,26 @@
 
 	* Description.......: Global sitewide styles - version 0.2
 	* Author............: Adriano Pezzella 
-	* Created date......: 05-03-2015
-	* Modified by.......: Adriano Pezzella
-	* Modified date.....: 10-25-2020
+	* Modified date.....: 01-1-2024
 
 +----------------------------------------------------------------------------------------------------*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {   }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {   }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {   }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {   }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {   }
+
 
 
 body, html{
@@ -104,7 +119,9 @@ hr {
 	clear: both;
 }
 
-
+img.img-responsive {
+    margin-bottom: 30px;
+}
 
 
 
@@ -178,13 +195,21 @@ hr {
 
 
 /* Home Style */
+
+
 #tf-home{
 	background: url(../img/01.jpg);
 	background-size: cover;
-	background-position: center -155px;
+	background-position: 40% -155px;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #cfcfcf;
+}
+
+@media (max-width: 768px) {   
+	#tf-home {
+		background-position: 46%;
+	}
 }
 
 #tf-home .overlay{
@@ -389,7 +414,8 @@ img.img-circle.awards-img {
 	padding: 40px 0;
 }
 #tf-services2  .service {
-	height: 85px;
+	display: flex;
+	height: 60px;
 	margin-bottom: 10px;
 }
 #tf-services2 i.fa {
@@ -403,6 +429,7 @@ img.img-circle.awards-img {
 	text-align: left;
 	font-size: 20px;
 	margin-top: 5px;
+	color: #818181;
 }
 
 
@@ -435,6 +462,14 @@ img.img-circle.awards-img {
 	padding: 80px 0;
 	background-attachment: fixed;
 }
+
+
+@media (max-width: 576px) {   
+	#tf-clients .overlay .container { padding: 0; }
+	section.slide-option { padding: 0; }
+}
+
+
 #tf-clients h2 {
 	color: #fff;
 }
@@ -553,11 +588,11 @@ div.highway-slider {
 	}
 	&::before {
 		top: 0; left: 0;
-		background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%);
 	}
 	&::after {
 		top: 0; right: 0;
-		background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%);
 	}
 	ul.highway-lane {
 		width: calc(200px * 20);
@@ -570,24 +605,6 @@ div.highway-slider {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
