@@ -767,6 +767,7 @@ ol.type li a.active { font-weight: 700; }
 }
 
 .carousel-control {
+	color: #000;
 	opacity: .2;
 }
 
@@ -783,11 +784,11 @@ ol.type li a.active { font-weight: 700; }
   display: inline-block;
 }
 .carousel-control .fa-chevron-left {
-  left: 50%;
+  left: 40%;
   margin-left: -10px;
 }
 .carousel-control .fa-chevron-right {
-  right: 50%;
+  right: 40%;
   margin-right: -10px;
 }
 
@@ -810,8 +811,9 @@ ol.type li a.active { font-weight: 700; }
   }
 }
 
-
-
+.carousel-control:hover, .carousel-control:focus {
+    color: #fff;
+}
 
 
 /* Testimonials Section */
