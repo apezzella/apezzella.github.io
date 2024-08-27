@@ -981,3 +981,49 @@ nav#footer p{
 
 
 
+
+
+/* Slide-in animation 
+==============================*/
+
+body {
+	/*min-height: 200vh;*/ /* Just for demonstration of scrolling */
+}
+/*section {
+	padding: 50px;
+	text-align: center;
+}*/
+
+/* Hidden state for sliding elements */
+.hidden {
+	opacity: 0;
+	transform: translateY(100px); /* Default hidden state */
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide in from the left */
+.slide-in-left.hidden {
+	transform: translateX(-100%);
+}
+.slide-in-left {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* Slide in from the right */
+.slide-in-right.hidden {
+	transform: translateX(100%);
+}
+.slide-in-right {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* Slide in from the bottom */
+.slide-in-bottom.hidden {
+	transform: translateY(100%);
+}
+.slide-in-bottom {
+	opacity: 1;
+	transform: translateY(0);
+}
