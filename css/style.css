@@ -34,6 +34,8 @@ body, html{
 	color: #5a5a5a;
 }
 
+body { font-size: 16px; }
+
 h1 {
 	text-transform: uppercase;
 }
@@ -54,7 +56,7 @@ font-weight: 900;
 
 h4 {
 	/*text-transform: uppercase;*/
-	font-weight: bold;
+	font-weight: 500;
 	line-height: 1;
 	margin:  0;
 }
@@ -68,13 +70,13 @@ p{
 }
 
 p.intro{
-	font-size: 16px;
+	font-size: 20px;
 	margin: 12px 0 30px;
-	line-height: 24px;
+	line-height: 32px;
 	font-family: 'Open Sans', sans-serif;
 }
 
-em { font-size: 16px; }
+em { font-size: 20px; }
 
 a { 
 	color: #E09639;	
@@ -87,7 +89,7 @@ a:focus {
 }
 
 .section-title hr{
-	border-color: #5a5a5a;
+	border-color: #E09639;
 	border-width: 4px;
 	width: 120px;
 	float: left;
@@ -107,6 +109,7 @@ a:focus {
 .clearfix { display: block; }
 
 ul, ol {
+	margin-left: 30px;
 	padding: 0;
 }
 
@@ -301,7 +304,7 @@ ul.about-list li span{
 	font-weight: 300;
 }
 .section-title.center .line {
-	border-top: 4px solid #5a5a5a;
+	border-top: 4px solid #E09639;
 	height: 10px;
 	width: 120px;
 	text-align: center;
@@ -420,7 +423,7 @@ img.img-circle.awards-img {
 }
 #tf-services2 i.fa {
 	float: left;
-	font-size: 40px;
+	font-size: 32px;
 	margin-right: 10px;
 	width: 40px;
 	height: 45px;
@@ -962,8 +965,9 @@ nav#footer p{
   padding: 5px;
 }	
 .modal-dialog.modal-full {
-  width: 98%;
+  width: 100%;
   max-width: 1600px;
+  margin: auto;
 }
 
 .owl-theme .owl-dots .owl-dot span {
