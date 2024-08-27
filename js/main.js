@@ -228,20 +228,36 @@ main();
 ======================================*/
 
 
-document.addEventListener("DOMContentLoaded", function () {
-	const elements = document.querySelectorAll('.hidden');
+function debounce(func, wait = 20, immediate = true) {
+	let timeout;
+	return function() {
+		const context = this, args = arguments;
+		const later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		const callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+}
 
-	const observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				entry.target.classList.remove('hidden');
-				observer.unobserve(entry.target); // Stop observing once the element is visible
-			}
-		});
-	}, { threshold: 0.1 });
-
-	elements.forEach(element => {
-		observer.observe(element);
+function checkSlide() {
+	const slideInElements = document.querySelectorAll('.slide-in');
+	slideInElements.forEach(slideInElement => {
+		// Half way through the element
+		const slideInAt = (window.scrollY + window.innerHeight) - slideInElement.clientHeight / 2;
+		// Bottom of the element
+		const elementBottom = slideInElement.offsetTop + slideInElement.clientHeight;
+		const isHalfShown = slideInAt > slideInElement.offsetTop;
+		const isNotScrolledPast = window.scrollY < elementBottom;
+		
+		if (isHalfShown && isNotScrolledPast) {
+			slideInElement.classList.add('active');
+		}
 	});
-});
+}
+
+window.addEventListener('scroll', debounce(checkSlide));
 
