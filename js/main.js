@@ -219,3 +219,29 @@ function main() {
 
 }
 main();
+
+
+
+
+/*====================================
+ Slide-in element effect
+======================================*/
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	const elements = document.querySelectorAll('.hidden');
+
+	const observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.remove('hidden');
+				observer.unobserve(entry.target); // Stop observing once the element is visible
+			}
+		});
+	}, { threshold: 0.1 });
+
+	elements.forEach(element => {
+		observer.observe(element);
+	});
+});
+
