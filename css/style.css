@@ -985,24 +985,24 @@ nav#footer p{
 
 .slide-in {
 	opacity: 0;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.8s ease-in-out;
 }
 
 .slide-in-left {
-	transform: translateX(-100%);
+	transform: translateX(-150%);
 }
 
 .slide-in-right {
-	transform: translateX(100%);
+	transform: translateX(150%);
 }
 
 .slide-in-bottom {
-	transform: translateY(100%);
+	transform: translateY(150%);
 }
 
 .slide-in.active {
 	opacity: 1;
-	transform: translate(0, 0);
+	transform: translateX(0) translateY(0);
 }
 
 
