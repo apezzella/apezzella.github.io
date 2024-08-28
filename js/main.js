@@ -244,11 +244,9 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 function checkSlide() {
-	const slideInElements = document.querySelectorAll('.slide-in');
+	const slideInElements = document.querySelectorAll('.slide-in:not(.active)');
 	slideInElements.forEach(slideInElement => {
-		// Half way through the element
 		const slideInAt = (window.scrollY + window.innerHeight) - slideInElement.clientHeight / 2;
-		// Bottom of the element
 		const elementBottom = slideInElement.offsetTop + slideInElement.clientHeight;
 		const isHalfShown = slideInAt > slideInElement.offsetTop;
 		const isNotScrolledPast = window.scrollY < elementBottom;
@@ -259,5 +257,26 @@ function checkSlide() {
 	});
 }
 
+function handleAnchorClick(event) {
+	event.preventDefault();
+	const targetId = event.target.getAttribute('href').substring(1);
+	const targetElement = document.getElementById(targetId);
+	
+	if (targetElement) {
+		targetElement.scrollIntoView({ behavior: 'smooth' });
+		
+		// Delay the animation check
+		setTimeout(() => {
+			checkSlide();
+		}, 500); // Adjust this value to increase or decrease the delay
+	}
+}
+
+document.querySelectorAll('nav a').forEach(anchor => {
+	anchor.addEventListener('click', handleAnchorClick);
+});
+
 window.addEventListener('scroll', debounce(checkSlide));
+window.addEventListener('load', checkSlide);
+document.addEventListener('DOMContentLoaded', checkSlide);
 
