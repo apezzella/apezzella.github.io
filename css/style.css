@@ -5,7 +5,7 @@
 
 	* Description.......: Global sitewide styles - version 0.2
 	* Author............: Adriano Pezzella 
-	* Modified date.....: 01-1-2024
+	* Modified date.....: 08-28-2024
 
 +----------------------------------------------------------------------------------------------------*/
 
@@ -27,14 +27,18 @@
 
 
 
-body, html{
+html, body {
+	overflow-x: hidden;
 	font-family: 'Lato', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #5a5a5a;
 }
 
-body { font-size: 16px; }
+body { 
+	position: relative;
+	font-size: 16px; 
+}
 
 h1 {
 	text-transform: uppercase;
