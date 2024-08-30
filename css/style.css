@@ -993,15 +993,15 @@ nav#footer p{
 }
 
 .slide-in-left {
-	transform: translateX(-150%);
+	transform: translateX(-50%);
 }
 
 .slide-in-right {
-	transform: translateX(150%);
+	transform: translateX(50%);
 }
 
 .slide-in-bottom {
-	transform: translateY(150%);
+	transform: translateY(50%);
 }
 
 .slide-in.active {
