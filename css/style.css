@@ -3,9 +3,9 @@
 
 /*----------------------------------------------------------------------------------------------------+
 
-	* Description.......: Global sitewide styles - version 0.2
+	* Description.......: Global sitewide styles - version 0.3
 	* Author............: Adriano Pezzella 
-	* Modified date.....: 08-28-2024
+	* Modified date.....: 01-20-2025
 
 +----------------------------------------------------------------------------------------------------*/
 
@@ -233,14 +233,14 @@ hr {
 }
 
 #tf-home p {
-	font-size: 32px;
 	color: #e3e3e3;
+	font-size: clamp(30px, calc(1vw + 1vh), 50px);
 }
 
 #tf-home p.lead {
-	font-size: 60px;
 	color: #e3e3e3;
 	font-weight: 500;
+	font-size: clamp(40px, calc(1vw + 1vh), 60px);
 }
 
 #tf-home .content {
@@ -261,13 +261,13 @@ hr {
   
 .tagline-text { 
 	max-width: 100%; 
-	margin-block-end: 5px; 
+	margin-block-end: 5px; 	
 }
 
-.tagline-text:nth-child(1) { transform: translateX(-80px); }
-.tagline-text:nth-child(2) { transform: translateX(10px); }
-.tagline-text:nth-child(3) { transform: translateX(-60px); margin-block-start: 40px; }
-.tagline-text:nth-child(4) { transform: translateX(35px); }
+.tagline-text:nth-child(1) { transform: translateX(-90px); }
+.tagline-text:nth-child(2) { transform: translateX(0px); }
+.tagline-text:nth-child(3) { transform: translateX(20px); margin-block-start: 20px; }
+.tagline-text:nth-child(4) { transform: translateX(105px); }
 
 
 @media only screen and (max-width: 768px) {
