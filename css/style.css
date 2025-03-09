@@ -777,6 +777,7 @@ ol.type li a.active { font-weight: 700; }
 	-webkit-transform: translateY(100%);
             transform: translateY(100%);
             transition: all 0.3s;
+	color: #fff;
 }
 .hover-bg:hover .hover-text>h4{
 	opacity: 1;
